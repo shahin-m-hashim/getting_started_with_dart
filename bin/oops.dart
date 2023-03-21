@@ -21,4 +21,5 @@ void main() {
   // name = 'Hello'; cannot reuse since name is final
 
   const constant = 10;
+  // const a; - throws an error
 }

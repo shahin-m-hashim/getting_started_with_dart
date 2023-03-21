@@ -17,7 +17,7 @@
   define these objects by specifying their attributes and behaviors.
 
   class represents blueprints for creating objects and objects/instances represents real working 
-  copies of that class an object can be anything - a car,person,house. each objects have 
+  copies of that class. an object can be anything - a car,person,house. each objects have 
   properties(variables) and behavior(fn)
   Eg: for an object person- properties:skin color,hair color,height,name and behavior walk,speak
 
@@ -42,5 +42,17 @@ void main() {
   p1.name = 'Suresh';
   p1.Age = 52;
   p1.Address = 'Punalur';
+  p1.define();
+
+  Person p2 = Person();
+  p1.name = 'Sura';
+  p1.Age = 40;
+  p1.Address = 'Kollam';
+  p1.define();
+
+  Person p3 = Person();
+  p1.name = 'Hari';
+  p1.Age = 20;
+  p1.Address = 'Anchal';
   p1.define();
 }

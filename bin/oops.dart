@@ -17,7 +17,7 @@
   define these objects by specifying their attributes and behaviors.
 
   class represents blueprints for creating objects and objects/instances represents real working 
-  copies of that class an object can be anything - a car,person,house. each objects have 
+  copies of that class. an object can be anything - a car,person,house. each objects have 
   properties(variables) and behavior(fn)
   Eg: for an object person- properties:skin color,hair color,height,name and behavior walk,speak
 
@@ -37,10 +37,72 @@ class Person {
   }
 }
 
+//constructor
+
+class Const_Person {
+  Const_Person() {
+    print("Constructor is called");
+  }
+}
+
+class Const_Person2 {
+  // properties of the class Person
+  String? name;
+  int? Age;
+
+  Const_Person2(String name, int Age) {
+    this.name = name; //this.name refers to actual class name
+    this.Age = Age;
+    // print("Second Constructor is called\n${this.name}");
+  }
+}
+
 void main() {
   Person p1 = Person();
   p1.name = 'Suresh';
   p1.Age = 52;
   p1.Address = 'Punalur';
   p1.define();
+
+  Person p2 = Person();
+  p1.name = 'Sura';
+  p1.Age = 40;
+  p1.Address = 'Kollam';
+  p1.define();
+
+  Person p3 = Person();
+  p1.name = 'Hari';
+  p1.Age = 20;
+  p1.Address = 'Anchal';
+  p1.define();
+
+  /* 
+    constructors - a special method used to initialize ann object/instance
+    constructor name should be same as class name,doesn't have any return type
+    syntax:
+    class ClassName {
+      Constructor declaration: Same as class name
+      ClassName() {
+      body of the constructor
+      }
+    }
+    called automatically when object is created, for eg:
+  */
+
+  Const_Person p = Const_Person(); //constructor is called automatically
+  Const_Person2 cp1 = Const_Person2('Shahin', 22);
+  Const_Person2 cp2 = Const_Person2('Ajmal', 20); //constructor with arguments
+  print("${cp1.name}\n${cp1.Age}\n\n${cp2.name}\n${cp2.Age}");
+
+  /*
+    The actual use of constructors is that we can assign values while creating instances itself
+    eg: 
+        With Constructor >
+        Person person = Person("John", 30);
+        
+        Without Constructor >
+        Person person = Person();
+        person.name = "John";
+        person.age = 30;
+  */
 }

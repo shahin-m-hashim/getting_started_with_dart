@@ -40,12 +40,20 @@ class Person {
 //constructor
 
 class Const_Person {
+  Const_Person() {
+    print("Constructor is called");
+  }
+}
+
+class Const_Person2 {
   // properties of the class Person
   String? name;
   int? Age;
 
-  Const_Person() {
-    print("Constructor is called");
+  Const_Person2(String name, int Age) {
+    this.name = name; //this.name refers to actual class name
+    this.Age = Age;
+    // print("Second Constructor is called\n${this.name}");
   }
 }
 
@@ -82,4 +90,19 @@ void main() {
   */
 
   Const_Person p = Const_Person(); //constructor is called automatically
+  Const_Person2 cp1 = Const_Person2('Shahin', 22);
+  Const_Person2 cp2 = Const_Person2('Ajmal', 20); //constructor with arguments
+  print("${cp1.name}\n${cp1.Age}\n\n${cp2.name}\n${cp2.Age}");
+
+  /*
+    The actual use of constructors is that we can assign values while creating instances itself
+    eg: 
+        With Constructor >
+        Person person = Person("John", 30);
+        
+        Without Constructor >
+        Person person = Person();
+        person.name = "John";
+        person.age = 30;
+  */
 }

@@ -1,3 +1,5 @@
+//everything about constructors - https://dart-tutorial.com/object-oriented-programming/constructor-in-dart/
+
 // with constructor
 
 class Student_const {
@@ -7,12 +9,17 @@ class Student_const {
   int? rno;
 
 //Student_const("Shahin"   , "CSE"        , 20     , 50)
-  Student_const(String name, String branch, int age, int rno) {
+  Student_const(name, String branch, int age, int rno) {
     this.name = name;
     this.branch = branch;
     this.age = age;
     this.rno = rno;
   }
+
+  /* 
+    The above initialization can further be simplified using parametrized constructor
+    Student_const(this.name, this.branch, this.age, this.rno);
+  */
 
   void display() {
     print(

@@ -92,7 +92,7 @@ void main() {
   Const_Person p = Const_Person(); //constructor is called automatically
   Const_Person2 cp1 = Const_Person2('Shahin', 22);
   Const_Person2 cp2 = Const_Person2('Ajmal', 20); //constructor with arguments
-  print("${cp1.name}\n${cp1.Age}\n\n${cp2.name}\n${cp2.Age}");
+  print("${cp1.name}\t${cp2.name}\n${cp1.Age}\t${cp2.Age}");
 
   /*
     The actual use of constructors is that we can assign values while creating instances itself

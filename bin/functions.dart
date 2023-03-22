@@ -33,7 +33,7 @@ void main() {
   */
 
   // Optional Parameters
-  opt(1); // 1 required argument and other named argument
+  opt(1, z: 2); // 1 required argument and other 2 named argument
   opt1(3); // 1 required argument and other named argument but handles null
   opt2(3, 4, 10); // 2 required argument and other 2 positional argument
   opt2(3, 4, 10, 3.2); // 2 required argument and other 2 positional argument
@@ -91,9 +91,11 @@ int mul(int a, int b) {
   return (a * b);
 }
 
-void opt(int x, {int? y}) {
-  print("Hey, Am an optional parameter function\nx:$x\ny:$y");
-  //this fn is optional named fn with x as required and y as named
+void opt(int x, {int? y, int? z}) {
+  print("Hey, Am an optional named parameter function\nx:$x\ny:$y\nz:$z");
+  //this fn is optional named fn with x as required, y and z are named.
+  //when named optional functions are called, initialize values to optional arguments in th call itself
+  //it can be any order, in my case i skipped y and added value for z using z:2
 }
 
 void opt1(int x, {int y = 0}) {

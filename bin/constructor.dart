@@ -9,7 +9,7 @@ class Student_const {
   int? rno;
 
 //Student_const("Shahin"   , "CSE"        , 20     , 50)
-  Student_const(name, String branch, int age, int rno) {
+  Student_const(String name, String branch, int age, int rno) {
     this.name = name;
     this.branch = branch;
     this.age = age;
@@ -17,6 +17,8 @@ class Student_const {
   }
 
   /* 
+    In Dart, the 'this' keyword is a reference to the current instance of the class. 
+    It is used to access the properties and methods of the current instance.
     The above initialization can further be simplified using parametrized constructor
     Student_const(this.name, this.branch, this.age, this.rno);
   */
